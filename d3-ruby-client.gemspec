@@ -1,0 +1,23 @@
+Gem::Specification.new do |spec|
+  spec.name          = "d3-ruby-client"
+  spec.version       = "1.0.0"
+  spec.authors       = [""]
+  spec.email         = [""]
+
+  spec.summary       = "Official Ruby client library for the D3 Business API"
+  spec.description   = "Official Ruby client library for the D3 Business API. Provides a simple and elegant interface for developers to interact with D3's file processing services."
+  spec.homepage      = "https://github.com/d3/d3-ruby-client"
+  spec.license       = "ISC"
+
+  spec.files         = Dir["lib/**/*", "README.md", "LICENSE"]
+  spec.require_paths = ["lib"]
+
+  spec.required_ruby_version = ">= 2.7.0"
+
+  spec.add_dependency "faraday", "~> 2.0"
+  spec.add_dependency "faraday-multipart", "~> 1.0"
+
+  spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "webmock", "~> 3.0"
+end
+
