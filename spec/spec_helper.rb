@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "d3_ruby_client"
+require "dragdropdo_sdk"
 require "webmock/rspec"
 
 RSpec.configure do |config|

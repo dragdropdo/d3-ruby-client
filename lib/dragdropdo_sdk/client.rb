@@ -5,14 +5,14 @@ require "time"
 require_relative "errors"
 
 module D3RubyClient
-  # D3 Business API Client
+  # Dragdropdo Business API Client
   #
-  # A Ruby client library for interacting with the D3 Business API.
+  # A Ruby client library for interacting with the Dragdropdo Business API.
   # Provides methods for file uploads, operations, and status checking.
-  class Client
+  class Dragdropdo
     attr_reader :api_key, :base_url, :timeout
 
-    # Create a new D3 Client instance
+    # Create a new Dragdropdo Client instance
     #
     # @param api_key [String] API key for authentication
     # @param base_url [String] Base URL of the D3 API (default: 'https://api-dev.dragdropdo.com')
@@ -20,7 +20,7 @@ module D3RubyClient
     # @param headers [Hash] Custom headers to include in all requests
     #
     # @example
-    #   client = D3RubyClient::Client.new(
+    #   client = D3RubyClient::Dragdropdo.new(
     #     api_key: 'your-api-key',
     #     base_url: 'https://api-dev.dragdropdo.com',
     #     timeout: 30000

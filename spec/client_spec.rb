@@ -2,11 +2,11 @@ require "spec_helper"
 require "tempfile"
 require "webmock/rspec"
 
-RSpec.describe D3RubyClient::Client do
+RSpec.describe D3RubyClient::Dragdropdo do
   API_BASE = "https://api-dev.dragdropdo.com"
 
   let(:client) do
-    D3RubyClient::Client.new(
+    D3RubyClient::Dragdropdo.new(
       api_key: "test-key",
       base_url: API_BASE,
       timeout: 30_000
@@ -16,7 +16,7 @@ RSpec.describe D3RubyClient::Client do
   describe "#initialize" do
     it "raises error when API key is missing" do
       expect do
-        D3RubyClient::Client.new(api_key: "")
+        D3RubyClient::Dragdropdo.new(api_key: "")
       end.to raise_error(D3RubyClient::D3ValidationError, "API key is required")
     end
 

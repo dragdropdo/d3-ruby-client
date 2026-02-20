@@ -4,7 +4,7 @@ require "net/http"
 require "uri"
 require "webmock/rspec"
 
-RSpec.describe D3RubyClient::Client, :live do
+RSpec.describe D3RubyClient::Dragdropdo, :live do
   API_BASE = ENV.fetch("D3_BASE_URL", "https://api-dev.dragdropdo.com")
   API_KEY = ENV["D3_API_KEY"]
   RUN_LIVE = ENV["RUN_LIVE_TESTS"] == "1"
@@ -23,7 +23,7 @@ RSpec.describe D3RubyClient::Client, :live do
   end
 
   let(:client) do
-    D3RubyClient::Client.new(
+    D3RubyClient::Dragdropdo.new(
       api_key: API_KEY,
       base_url: API_BASE,
       timeout: 120_000

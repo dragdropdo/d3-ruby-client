@@ -1,4 +1,4 @@
-# D3 Ruby Client
+# DragDropDo Ruby SDK
 
 Official Ruby client library for the D3 Business API. This library provides a simple and elegant interface for developers to interact with D3's file processing services.
 
@@ -16,7 +16,7 @@ Official Ruby client library for the D3 Business API. This library provides a si
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'd3-ruby-client'
+gem 'dragdropdo-sdk'
 ```
 
 And then execute:
@@ -28,16 +28,16 @@ bundle install
 Or install it yourself as:
 
 ```bash
-gem install d3-ruby-client
+gem install dragdropdo-sdk
 ```
 
 ## Quick Start
 
 ```ruby
-require 'd3_ruby_client'
+require 'dragdropdo_sdk'
 
 # Initialize the client
-client = D3RubyClient::Client.new(
+client = D3RubyClient::Dragdropdo.new(
   api_key: 'your-api-key-here',
   base_url: 'https://api.d3.com', # Optional, defaults to https://api.d3.com
   timeout: 30000 # Optional, defaults to 30000ms
@@ -86,7 +86,7 @@ end
 
 ### Initialization
 
-#### `D3RubyClient::Client.new(api_key:, base_url: nil, timeout: 30000, headers: {})`
+#### `D3RubyClient::Dragdropdo.new(api_key:, base_url: nil, timeout: 30000, headers: {})`
 
 Create a new D3 client instance.
 
@@ -100,7 +100,7 @@ Create a new D3 client instance.
 **Example:**
 
 ```ruby
-client = D3RubyClient::Client.new(
+client = D3RubyClient::Dragdropdo.new(
   api_key: 'your-api-key',
   base_url: 'https://api.d3.com',
   timeout: 30000
@@ -323,11 +323,11 @@ end
 Here's a complete example showing the typical workflow:
 
 ```ruby
-require 'd3_ruby_client'
+require 'dragdropdo_sdk'
 
 def process_file
   # Initialize client
-  client = D3RubyClient::Client.new(
+  client = D3RubyClient::Dragdropdo.new(
     api_key: ENV['D3_API_KEY'],
     base_url: 'https://api.d3.com'
   )

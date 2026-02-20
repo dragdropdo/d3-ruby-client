@@ -2,6 +2,6 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in d3-ruby-client.gemspec
+# Specify your gem's dependencies in dragdropdo-sdk.gemspec
 gemspec
 
